@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('PUT Method API Testing', () => {
+test.describe('PATCH Method API Testing', () => {
     test('Update user details', async ({ request }) => {
         // Define the request body
         const requestBody = {
@@ -9,7 +9,7 @@ test.describe('PUT Method API Testing', () => {
         };
     
         // Send PUT request to the API
-        const response = await request.put('/api/users/2', {
+        const response = await request.patch('/api/users/2', {
             data: requestBody,
         });
     
@@ -31,7 +31,7 @@ test.describe('PUT Method API Testing', () => {
 
         // Optional Response time validation
         const startTime = Date.now();
-        await request.post('/api/users/2', {
+        await request.patch('/api/users/2', {
             data: requestBody,
         });
         const duration = Date.now() - startTime;
