@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { request } from 'http';
 
 test.describe('GET Method API Testing', () => {
     test('Get list of users', async ({ request }) => {
