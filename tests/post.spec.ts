@@ -145,5 +145,4 @@ test.describe('POST Method API Testing', () => {
         // Validate the response structure and error message
         expect(responseBody).toHaveProperty('error', 'Missing password'); // Check if 'error' property exists with the correct message
     });
-
 });
